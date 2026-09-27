@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Donor Dashboard - BloodConnect</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+            🩸 BloodConnect
+        </div>
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="find-blood.html">
+                Find Blood
+            </a>
+
+            <a
+                href="donor-dashboard.html"
+                class="active"
+            >
+                Dashboard
+            </a>
+
+            <button id="logoutBtn">
+                Logout
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <!-- MAIN DASHBOARD -->
+
+    <main class="dashboard-container">
+
+
+        <!-- WELCOME -->
+
+        <section class="dashboard-header">
+
+            <div>
+
+                <p class="dashboard-label">
+                    DONOR PORTAL
+                </p>
+
+                <h1>
+                    Welcome back,
+                    <span id="donorName">
+                        Donor
+                    </span> 👋
+                </h1>
+
+                <p class="dashboard-subtitle">
+                    Your availability can help save a life.
+                </p>
+
+            </div>
+
+
+            <div class="blood-badge">
+
+                <span>
+                    Blood Group
+                </span>
+
+                <strong id="bloodGroupBadge">
+                    --
+                </strong>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- STAT CARDS -->
+
+        <section class="dashboard-stats">
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🩸
+                </div>
+
+                <div>
+
+                    <span>
+                        Blood Group
+                    </span>
+
+                    <strong id="statBloodGroup">
+                        --
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    📍
+                </div>
+
+                <div>
+
+                    <span>
+                        Location
+                    </span>
+
+                    <strong id="statCity">
+                        --
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    ❤️
+                </div>
+
+                <div>
+
+                    <span>
+                        Availability
+                    </span>
+
+                    <strong id="statAvailability">
+                        --
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- TWO COLUMN AREA -->
+
+        <section class="dashboard-grid">
+
+
+            <!-- DONOR INFORMATION -->
+
+            <div class="donor-card">
+
+                <div class="card-title">
+
+                    <div>
+
+                        <span class="section-label">
+                            PROFILE
+                        </span>
+
+                        <h2>
+                            Donor Information
+                        </h2>
+
+                    </div>
+
+                    <div class="profile-icon">
+                        👤
+                    </div>
+
+                </div>
+
+
+                <div class="donor-info">
+
+
+                    <div>
+
+                        <strong>
+                            Full Name
+                        </strong>
+
+                        <span id="name">
+                            --
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            Email
+                        </strong>
+
+                        <span id="email">
+                            --
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            Phone
+                        </strong>
+
+                        <span id="phone">
+                            --
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            Blood Group
+                        </strong>
+
+                        <span id="bloodGroup">
+                            --
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            Age
+                        </strong>
+
+                        <span id="age">
+                            --
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            Gender
+                        </strong>
+
+                        <span id="gender">
+                            --
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            City
+                        </strong>
+
+                        <span id="city">
+                            --
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- AVAILABILITY -->
+
+            <div class="availability-card">
+
+
+                <div class="availability-icon">
+                    ❤️
+                </div>
+
+
+                <span class="section-label">
+                    DONATION STATUS
+                </span>
+
+
+                <h2>
+                    Your Availability
+                </h2>
+
+
+                <p>
+                    Keep your availability updated so patients
+                    can find you when they need your blood group.
+                </p>
+
+
+                <div class="availability-status">
+
+                    <span id="availabilityStatus">
+                        Checking...
+                    </span>
+
+                </div>
+
+
+                <button
+                    id="availabilityBtn"
+                    class="availability-btn"
+                >
+                    Change Availability
+                </button>
+
+
+                <p
+                    id="availabilityMessage"
+                    class="availability-message"
+                ></p>
+
+
+            </div>
+
+
+        </section>
+
+        <!-- =========================================
+     MATCHING BLOOD REQUESTS
+========================================= -->
+
+<section class="donor-requests-section">
+
+    <div class="donor-section-heading">
+
+        <div>
+            <h2>Blood Requests Near You</h2>
+
+            <p>
+                Requests matching your blood group
+                and city.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div
+        id="donorRequestsContainer"
+        class="donor-requests-container">
+
+        <div class="donor-requests-loading">
+
+            Loading matching requests...
+
+        </div>
+
+    </div>
+
+</section>
+
+
+        <!-- INFORMATION BANNER -->
+
+        <section class="dashboard-tip">
+
+            <div class="tip-icon">
+                💡
+            </div>
+
+            <div>
+
+                <strong>
+                    Make a difference today
+                </strong>
+
+                <p>
+                    Keeping your availability updated helps
+                    patients quickly find suitable blood donors.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <script src="js/donor-dashboard.js"></script>
+
+</body>
+
+</html>

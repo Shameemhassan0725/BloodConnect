@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1790481454505,
+    "name": "sham",
+    "email": "shamtest@gmail.com",
+    "password": "$2b$10$Z6dBrGqYvo9n2xTFWpbXnu5jW2SCHz3cX1V9DcbgW9C1Li.90fukW",
+    "phone": "1234567890",
+    "age": "22",
+    "gender": "Male",
+    "city": "salem"
+  },
+  {
+    "id": 1790481734968,
+    "name": "sakeena",
+    "email": "sakeentest@gmail.com",
+    "password": "$2b$10$a7zSX3LDKk/dPGWcTvKT5.xDWeYT771GrvUmz6HA79nKiE/eOrxMq",
+    "phone": "1234567890",
+    "age": "22",
+    "gender": "Female",
+    "city": "erode"
+  },
+  {
+    "id": 1790494838262,
+    "name": "kumar",
+    "email": "patient@gmail.com",
+    "password": "$2b$10$r4/xzSyMB9WoHAE/3dVCbe8QwjWz4CXZ.2toZKqwog/iTvy6dOzSa",
+    "phone": "9875641237",
+    "age": 25,
+    "gender": "Male",
+    "city": "erode"
+  },
+  {
+    "id": 1790516435256,
+    "name": "arun",
+    "email": "arun@gmail.com",
+    "password": "$2b$10$8Qh2aDu4yfmovOdFpDmIf.7H9vLS.55YsbYcBxtXexcto7BHkCVDm",
+    "phone": "8794563212",
+    "age": 20,
+    "gender": "Male",
+    "city": "erode"
+  }
+]

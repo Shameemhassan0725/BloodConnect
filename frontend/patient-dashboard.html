@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Patient Dashboard - BloodConnect</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            Blood<span>Connect</span>
+        </div>
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="find-blood.html">
+                Find Blood
+            </a>
+
+            <a href="patient-dashboard.html"
+               class="active">
+                Dashboard
+            </a>
+
+            <button
+                id="logoutBtn"
+                class="logout-btn">
+                Logout
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         DASHBOARD
+    ========================== -->
+
+    <main class="patient-dashboard">
+
+        <!-- Welcome Banner -->
+
+        <section class="patient-welcome">
+
+            <div>
+
+                <p class="welcome-label">
+                    PATIENT DASHBOARD
+                </p>
+
+                <h1>
+                    Welcome,
+                    <span id="patientName">
+                        Patient
+                    </span>
+                    👋
+                </h1>
+
+                <p>
+                    Manage your blood requests
+                    and find available donors.
+                </p>
+
+            </div>
+
+
+            <div class="patient-blood-icon">
+                🩸
+            </div>
+
+        </section>
+
+
+        <!-- Statistics -->
+
+        <section class="patient-stats">
+
+            <div class="patient-stat-card">
+
+                <div class="stat-icon">
+                    🩸
+                </div>
+
+                <div>
+                    <span>
+                        Blood Group
+                    </span>
+
+                    <strong id="patientBloodGroup">
+                        —
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <div class="patient-stat-card">
+
+                <div class="stat-icon">
+                    📍
+                </div>
+
+                <div>
+                    <span>
+                        Location
+                    </span>
+
+                    <strong id="patientCity">
+                        —
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <div class="patient-stat-card">
+
+                <div class="stat-icon">
+                    📋
+                </div>
+
+                <div>
+                    <span>
+                        Blood Requests
+                    </span>
+
+                    <strong id="requestCount">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Main Dashboard Cards -->
+
+        <section class="patient-actions">
+
+            <!-- Find Blood -->
+
+            <div class="patient-action-card">
+
+                <div class="action-icon">
+                    🔎
+                </div>
+
+                <h2>
+                    Find Blood
+                </h2>
+
+                <p>
+                    Search for available blood donors
+                    based on blood group and location.
+                </p>
+
+                <a href="find-blood.html"
+                   class="dashboard-btn">
+                    Find Available Donors
+                </a>
+
+            </div>
+
+
+            <!-- Blood Request -->
+
+            <div class="patient-action-card">
+
+                <div class="action-icon">
+                    🚨
+                </div>
+
+                <h2>
+                    Request Blood
+                </h2>
+
+                <p>
+                    Create an emergency blood request
+                    and let nearby donors know.
+                </p>
+
+                <button
+                    id="requestBloodBtn"
+                    class="dashboard-btn">
+                    Create Blood Request
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Profile -->
+
+        <section class="patient-profile-card">
+
+            <div class="profile-header">
+
+                <div>
+
+                    <p class="section-label">
+                        MY PROFILE
+                    </p>
+
+                    <h2>
+                        Patient Information
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="profile-grid">
+
+                <div class="profile-item">
+
+                    <span>
+                        Full Name
+                    </span>
+
+                    <strong id="profileName">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="profile-item">
+
+                    <span>
+                        Email
+                    </span>
+
+                    <strong id="profileEmail">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="profile-item">
+
+                    <span>
+                        Phone
+                    </span>
+
+                    <strong id="profilePhone">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="profile-item">
+
+                    <span>
+                        Age
+                    </span>
+
+                    <strong id="profileAge">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="profile-item">
+
+                    <span>
+                        Gender
+                    </span>
+
+                    <strong id="profileGender">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="profile-item">
+
+                    <span>
+                        City
+                    </span>
+
+                    <strong id="profileCity">
+                        —
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =========================================
+     MY BLOOD REQUESTS
+========================================= -->
+
+<section class="patient-requests-section">
+
+    <div class="section-heading">
+        <div>
+            <h2>My Blood Requests</h2>
+            <p>Track the blood requests you have submitted.</p>
+        </div>
+    </div>
+
+    <div id="patientRequestsContainer" class="patient-requests-container">
+
+        <div class="requests-loading">
+            Loading your requests...
+        </div>
+
+    </div>
+
+</section>
+
+
+        <!-- Information -->
+
+        <section class="patient-info-banner">
+
+            <div class="info-icon">
+                ❤️
+            </div>
+
+            <div>
+
+                <h3>
+                    Need blood urgently?
+                </h3>
+
+                <p>
+                    Use Find Blood to search for
+                    available donors near your location.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            © 2026 BloodConnect.
+            Emergency Blood Donor Finder.
+        </p>
+
+    </footer>
+
+
+    <script src="js/patient-dashboard.js"></script>
+
+</body>
+
+</html>

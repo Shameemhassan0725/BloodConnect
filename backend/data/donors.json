@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1790479473953,
+    "name": "shameem",
+    "email": "shameemtest@gmail.com",
+    "password": "$2b$10$YQ4iTI2oKP2cvM9aPDU9yeIFgsBYzsCALIhG4OgYww.Mcz31A/ta6",
+    "phone": "8778867188",
+    "bloodGroup": "B+",
+    "age": 21,
+    "gender": "Male",
+    "city": "erode",
+    "available": true
+  },
+  {
+    "id": 1790495192221,
+    "name": "arun kumar",
+    "email": "donor@gmail.com",
+    "password": "$2b$10$Z8asInxmOv2cO45oGfUEAeIkzlyiZzdP6Cas0QaMHy8DGd7j4.h0W",
+    "phone": "6541237893",
+    "bloodGroup": "B+",
+    "age": 24,
+    "gender": "Male",
+    "city": "erode",
+    "available": true
+  },
+  {
+    "id": 1790516207987,
+    "name": "ravi",
+    "email": "ravitest@gmail.com",
+    "password": "$2b$10$v5Ur8j5xDY53lgU29SOdo.PL9ke/miMW3YPQaU.RryYoE.3c5PHmq",
+    "phone": "7894563214",
+    "bloodGroup": "B+",
+    "age": 23,
+    "gender": "Male",
+    "city": "erode",
+    "available": true
+  }
+]
